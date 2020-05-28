@@ -155,6 +155,33 @@ $('#queryFeeBtn').click(async function(){
 	$("#loader").hide();
 });
 
+//If someone clicks extend Oracle,  execute queryFee
+//Si alguien hace clic para externder oráculo, ejecute extendOracle
+$('#extendOracleBtn').click(async function(){
+	$("#loader").show();
+	client = await Ae.Aepp();
+	const adrress = ($('#adrress').val());
+	await contractCall('extendOracle', [adrress,200], 0);
+	document.getElementById("textnotice").innerHTML = "extend";
+	div = document.getElementById('notice');
+	div.style.display = '';
+	$("#loader").hide();
+});
+
+//If someone clicks register Oracle,  execute queryFee
+//Si alguien hace clic para registrar oráculo, ejecute registerOracle
+$('#registerOracleBtn').click(async function(){
+	$("#loader").show();
+	client = await Ae.Aepp();
+	const adrress = ($('#adrress').val());
+	await contractCall('registerOracle', [10,200], 0);
+	document.getElementById("textnotice").innerHTML = "extend";
+	div = document.getElementById('notice');
+	div.style.display = '';
+	$("#loader").hide();
+});
+
+
 //If someone clicks to create Query,  execute createQuery
 //Si alguien hace clic para crear query, ejecute createQuery
 $('#createQueryBtn').click(async function(){
