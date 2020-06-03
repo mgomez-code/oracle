@@ -30,7 +30,7 @@ contract_address--> obtiene la dirección del contrato
 contract_balance--> obtiene el balance del oraculo
 ```
 ******************************
-## Addresses used for compilation and deploy of the contract
+## Key used for compilation and deploy of the contract
 ******************************
 ```sh
 public key : ak_2nniXZjP6vVDZCSpwkvXjbzCqKqHrXKQgv4ug2VnurumNE1Gfk
