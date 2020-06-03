@@ -27,7 +27,7 @@ extendOracle	--> Función que extender el tiempo del oráculo. argumentos [Oracl
 ```sh
 contract_creator--> obtiene la dirección con la que se creo el contrato
 contract_address--> obtiene la dirección del contrato
-contract_balance  --> obtiene el balance del oraculo
+contract_balance--> obtiene el balance del oraculo
 ```
 ******************************
 ## Addresses used for compilation and deploy of the contract
