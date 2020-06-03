@@ -2,11 +2,12 @@ contract Oracles =
 
   record state = {  // Valores claves a guardar
     greeter_oracle : oracle(string, string),
-    id_query : map(address, oracle_query(string, string)) }
+    id_query : map(address, oracle_query(string, string)),
+    question_answer : map(string, string)}
 
   stateful entrypoint init() : state =  //Función de Inicio
     let greeter_oracle : oracle(string, string) = registerOracle(10,200)
-    { greeter_oracle = greeter_oracle, id_query = {}  }
+    { greeter_oracle = greeter_oracle, id_query = {}, question_answer  = {} }
 
   stateful entrypoint registerOracle(      // Función para Registrar el Oraculo del Contracto
                            qfee : int,     //Fee de pago mínimo
@@ -21,6 +22,19 @@ contract Oracles =
       None    => abort("No query")
       Some(x) => x
 
+  entrypoint get_answer(stranswer : string) =  //Consulta si hay respuesta
+    switch(Map.lookup(stranswer, state.question_answer))
+      None    => abort("No Resitrado")
+      Some(x) => x
+
+  payable stateful entrypoint quest_answer(quest : string, answ : string) : bool =  //Función registrar respuesta
+    let val = Call.value
+    if(val > 0)
+      false
+    else
+      put(state{question_answer[quest] = answ })
+      true
+
   entrypoint queryFee(o : oracle(string, string)) : int =  //Consulta pago mínimo para una consulta del oráculo
     Oracle.query_fee(o)
 
@@ -32,6 +46,8 @@ contract Oracles =
                                           rttl : int) : oracle_query(string, string) =    //controla el tiempo que una respuesta se mantiene en la cadena
     require(qfee =< Call.value, "insufficient value for qfee")    //verifica el pago
     let query : oracle_query(string, string) = Oracle.query(o, q, qfee, RelativeTTL(qttl), RelativeTTL(rttl))    //registra la consulta al oráculo, muestra el id
+    let query_answer = get_answer(q)
+    Oracle.respond(o, query, query_answer)
     put(state{id_query[Call.caller] = query })
     query
 
