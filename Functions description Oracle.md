@@ -3,20 +3,23 @@
 ## Call Static Function
 ******************************
 ```sh
-get_oracle	--> obtiene la dirección del oraculo
-get_balance 	--> obtiene el balance del oraculo
-queryFee	--> obtiene el ID de consulta del oraculo
-get_to_greet	--> obtiene el ID de consulta del oraculo
+get_oracle	--> Consulta dirección del oráculo
+get_balance 	--> Obtiene el balance del oráculo.argumentos [OracleAddress : string]
+queryFee	--> Obtiene pago mínimo para una consulta del oráculo.argumentos [OracleAddress : string]
+getQuestion	--> Consulta la pregunta que le hicieron al orácula según id. argumentos [OracleAddress : string, OracleID : string]
+hasAnswer	--> Consulta si la pregunta tiene respuesta. argumentos [OracleAddress : string, OracleID : string]
+getAnswer	--> Muestra la respuesta a una pregunta. argumentos [OracleAddress : string, OracleID : string]
 ```
 ******************************
 ## Call Function
 ******************************
 ```sh
-register_oracle	--> obtiene el ID de consulta del oraculo
-greet_oracle	--> obtiene el ID de consulta del oraculo
-respond_to_greet--> obtiene el ID de consulta del oraculo
-getQuestion	--> Obtiene la pregunta que le hicieron al orácula según id. argumentos [OracleAddress, OracleID]
-hasAnswer	--> Valida si la pregunta tiene respuesta, respondiento un True o Falso. argumentos [OracleAddress, OracleID]
+register_oracle	--> Función para Registrar el Oraculo. argumentos [qfee : int,  rttl : int]
+get_query	--> Obtiene el ID de consulta del oraculo. argumentos [OracleAddress : string]
+respond		--> Función registrar respuesta. argumentos [OracleAddress : string, OracleID : string, r : string)]
+quest_answer	--> Función registrar pregunta y respuesta. argumentos [quest : string, answ : string]
+createQuery 	--> Función payable que realiza pregunta al oraculo. argumentos [OracleAddress : string, q    : string, qfee : int, qttl : int, rttl : int]
+extendOracle	--> Función que extender el tiempo del oráculo. argumentos [OracleAddress : string, ttl : int]
 ```
 ******************************
 ## General-Purpose functions
