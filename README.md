@@ -27,8 +27,8 @@ url:(https://mgomez-code.github.io/oracle/)
 #####  12.- Se verifica que en pantalla salga el valor de Fee Query (10), en este caso.
 #####  13.- Bajamos en la pantalla y nos posicionamos en la sección Register Question Answer.
 #####  14.- Ingresamos las preguntas y respuestas de nuestra preferencia, Para efecto de este tutorial usaremos las siguientes:
-	14.1- Question: Temperatura / Answer: Ambiente. Ingresar datos y pulsar el botón de comando Register Question Answer. 
-        14.2- Question: Humedad / Answer: Relativa. Ingresar datos y pulsar el botón de comando Register Question Answer. 
+	14.1- Question: Temperatura / Answer: Ambiente. Ingresar datos y pulsar el botón de comando Register Question Answer.
+	14.2- Question: Humedad / Answer: Relativa. Ingresar datos y pulsar el botón de comando Register Question Answer. 
         14.3- Question: Radiacion / Answer: Solar. Ingresar datos y pulsar el botón de comando Register Question Answer. 
 #####  15.- Bajamos en la pantalla y nos posicionamos en la sección Create Query.
 #####  16.- En el campo String colocamos la cualquiera de las preguntas que fueron registradas en el paso anterior y el valor 10 correspondiente al fee en el campo Payment.
@@ -36,5 +36,5 @@ url:(https://mgomez-code.github.io/oracle/)
 #####  18.- Verificamos en pantalla que aparezca el Id Query que es lo que identifica la respuesta en el oracle.
 #####  19.- Pulsar el boton de comando identificado como Answer.
 #####  20.- Subimos en la pantalla y verificamos la respuesta.
-#####  21.- Repetimos los pasos del 16 al 20 para los dos saludos restantes.
+#####  21.- Repetimos los pasos del 16 al 20 para las dos respuestas restantes.
 
