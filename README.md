@@ -2,7 +2,7 @@
 # Tutorial Oracle
 ### ¿Cómo funciona?  
 
-Ejemplo de contrato inteligente que permite interactuar con las funcionesde de operación de un oracle. Perimitiendo gestionar las preguntas y respuestas del oracle
+Ejemplo de contrato inteligente que permite interactuar con las funciones de operación de un oracle. Perimitiendo gestionar las preguntas y respuestas del oracle
 
 ### Paso a Paso
 #####  1.- Obtener la base aepp de cualquiera de los siguientes enlaces:
