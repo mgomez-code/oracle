@@ -37,4 +37,4 @@ url:(https://mgomez-code.github.io/oracle/)
 #####  19.- Pulsar el boton de comando identificado como Answer.
 #####  20.- Subimos en la pantalla y verificamos la respuesta.
 #####  21.- Repetimos los pasos del 16 al 20 para las dos respuestas restantes.
-
+- [Vídeo de Funcionamiento del Aplicativo](https://youtu.be/watch?v=KXVgPznlQps)
